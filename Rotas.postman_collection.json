@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "61311c37-025f-417a-adee-f05e0f14e6fb",
+		"name": "Rotas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Localhost",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"chat\": true,\r\n    \"username\": \"admin1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/settings",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"alvaro.r.p@hotmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List Messages By User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/messages/21eab512-c6a5-4b36-b458-7b5bbe74f7e3",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"messages",
+						"21eab512-c6a5-4b36-b458-7b5bbe74f7e3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"21eab512-c6a5-4b36-b458-7b5bbe74f7e3\",\r\n    \"text\": \"Qual seu Nome\",\r\n    \"admin_id\": \"e1677d9a-ac73-11eb-8529-0242ac130003\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3333/messages",
+					"host": [
+						"localhost"
+					],
+					"port": "3333",
+					"path": [
+						"messages"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Mensagem Usuario",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"21eab512-c6a5-4b36-b458-7b5bbe74f7e3\",\r\n    \"text\": \"Ola to testando\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/messages",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Mensagem Administrador",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user_id\": \"21eab512-c6a5-4b36-b458-7b5bbe74f7e3\",\r\n    \"text\": \"Ola to testando Mensagem administrador\",\r\n    \"admin_id\": \"e1677d9a-ac73-11eb-8529-0242ac130003\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3333/messages",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"messages"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		}
+	]
+}
