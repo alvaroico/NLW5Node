@@ -10,7 +10,7 @@ import {
 import { v4 as uuid } from "uuid";
 import { User } from "./User";
 
-@Entity("messages")
+@Entity("connections")
 class Connection {
   @PrimaryColumn()
   id: string;
@@ -33,7 +33,7 @@ class Connection {
   created_at: Date;
 
   @UpdateDateColumn()
-  updated_at: Date;
+  update_at: Date;
 
   constructor() {
     if (!this.id) {
