@@ -5,7 +5,7 @@ import {
   TableForeignKey,
 } from "typeorm";
 
-export class CreateConnections1620096197857 implements MigrationInterface {
+export class CreateConnections1619005126631 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -35,7 +35,7 @@ export class CreateConnections1620096197857 implements MigrationInterface {
             default: "now()",
           },
           {
-            name: "update_at",
+            name: "updated_at",
             type: "timestamp",
             default: "now()",
           },

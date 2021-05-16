@@ -7,6 +7,7 @@ import {
   JoinColumn,
   UpdateDateColumn,
 } from "typeorm";
+
 import { v4 as uuid } from "uuid";
 import { User } from "./User";
 
@@ -25,7 +26,6 @@ class Connection {
   @ManyToOne(() => User)
   user: User;
 
-  // O banco vai verificar se existe
   @Column()
   user_id: string;
 
@@ -33,7 +33,7 @@ class Connection {
   created_at: Date;
 
   @UpdateDateColumn()
-  update_at: Date;
+  updated_at: Date;
 
   constructor() {
     if (!this.id) {

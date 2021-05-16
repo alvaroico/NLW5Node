@@ -6,6 +6,7 @@ import {
   ManyToOne,
   JoinColumn,
 } from "typeorm";
+
 import { v4 as uuid } from "uuid";
 import { User } from "./User";
 
@@ -24,7 +25,6 @@ class Message {
   @ManyToOne(() => User)
   user: User;
 
-  // O banco vai verificar se existe
   @Column()
   user_id: string;
 
